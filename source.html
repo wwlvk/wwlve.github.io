@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>отдаём в надёжные руки</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Inter:wght@400;600&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:#0b0b0f;
+    color:#f2f0ea;
+    display:flex;align-items:center;justify-content:center;
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+  }
+  .grain{position:fixed;inset:0;opacity:.06;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .glow{position:fixed;width:900px;height:900px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,92,53,.30),transparent 62%);
+    top:-320px;left:-260px;filter:blur(20px)}
+  .glow2{position:fixed;width:700px;height:700px;border-radius:50%;
+    background:radial-gradient(circle,rgba(80,120,255,.22),transparent 62%);
+    bottom:-300px;right:-220px;filter:blur(20px)}
+  .card{
+    position:relative;z-index:2;
+    width:min(760px,92vw);
+    padding:64px 56px 56px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:28px;
+    background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+    backdrop-filter:blur(14px);
+    box-shadow:0 40px 120px rgba(0,0,0,.6);
+  }
+  .tag{
+    display:inline-block;
+    font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+    color:#ff8a5c;border:1px solid rgba(255,138,92,.35);
+    padding:7px 14px;border-radius:100px;margin-bottom:28px;
+  }
+  h1{
+    font-family:'Unbounded',sans-serif;font-weight:900;
+    font-size:clamp(38px,7vw,72px);line-height:.96;
+    letter-spacing:-.03em;margin-bottom:22px;
+  }
+  h1 em{font-style:normal;
+    background:linear-gradient(90deg,#ff5c35,#ffb545);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  p{font-size:18px;line-height:1.6;color:rgba(242,240,234,.62);max-width:52ch;margin-bottom:38px}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    font-weight:600;font-size:17px;text-decoration:none;color:#0b0b0f;
+    background:linear-gradient(90deg,#ff5c35,#ffb545);
+    padding:17px 30px;border-radius:100px;
+    box-shadow:0 14px 40px rgba(255,92,53,.32);
+    transition:transform .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .meta{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:13px;letter-spacing:.06em;color:rgba(242,240,234,.34)}
+</style>
+</head>
+<body>
+<div class="glow"></div><div class="glow2"></div><div class="grain"></div>
+<main class="card">
+  <span class="tag">частное объявление</span>
+  <h1>Отдаём<br><em>в надёжные руки</em></h1>
+  <p>Домашний, приученный, к лотку ходит сам. Ест немного, спит много, в CS2 играет соло. Возможен торг, доставка по договорённости.</p>
+  <a class="btn" href="https://t.me/sorrywomen">Написать в Telegram →</a>
+  <div class="meta">@sorrywomen · только серьёзные предложения</div>
+</main>
+</body>
+</html>
